@@ -71,6 +71,7 @@ public class Cat {
 		g2.fillPolygon(ear2);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
-		g2.drawString("Meow", catX, catY+HEAD_DIMENSION+10);	
+		g2.drawString("Meow,", catX, catY+HEAD_DIMENSION+10);	
+		g2.drawString("My name is Sir Snuggles McMeow.", catX, catY+HEAD_DIMENSION+25);	
 	}
 }
