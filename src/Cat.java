@@ -27,12 +27,6 @@ public class Cat {
 	private static final int EAR_Y2 = 8;
 	private static final int EAR_Y3 = 24;
 	
-	private static final int EAR_X4 = 50;
-	private static final int EAR_X5 = 66;
-	private static final int EAR_X6 = 50;
-	private static final int EAR_Y4 = 50;
-	private static final int EAR_Y5 = 50;
-	private static final int EAR_Y6 = 66;
 	
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY)
@@ -71,7 +65,7 @@ public class Cat {
 		g2.fillPolygon(ear2);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
-		g2.drawString("Meow,", catX, catY+HEAD_DIMENSION+10);	
+		g2.drawString("Meow!", 0, 12);	
 		g2.drawString("My name is Sir Snuggles McMeow.", catX, catY+HEAD_DIMENSION+25);	
 	}
 }
