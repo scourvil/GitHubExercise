@@ -66,6 +66,7 @@ public class Cat {
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
 		g2.drawString("Meow!", 0, 12);	
+
 		g2.drawString("My name is Sir Snuggles McMeow.", catX, catY+HEAD_DIMENSION+25);	
 	}
 }
