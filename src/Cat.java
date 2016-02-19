@@ -27,6 +27,13 @@ public class Cat {
 	private static final int EAR_Y2 = 8;
 	private static final int EAR_Y3 = 24;
 	
+	private static final int EAR_X4 = 50;
+	private static final int EAR_X5 = 66;
+	private static final int EAR_X6 = 50;
+	private static final int EAR_Y4 = 50;
+	private static final int EAR_Y5 = 50;
+	private static final int EAR_Y6 = 66;
+	
 	// draw will render the Cat on the Graphics object
 	public void draw(Graphics g, int catX, int catY)
 	{
@@ -56,6 +63,12 @@ public class Cat {
 		ear.addPoint(catX + EAR_X2, catY + EAR_Y2);
 		ear.addPoint(catX + EAR_X3, catY + EAR_Y3);
 		g2.fillPolygon(ear);
+		g2.setColor(Color.black);
+		Polygon ear2 = new Polygon();
+		ear2.addPoint(catX + EAR_X1+ 90, catY + EAR_Y1);
+		ear2.addPoint(catX + EAR_X2 + 50, catY + EAR_Y2 );
+		ear2.addPoint(catX + EAR_X3 + 80, catY + EAR_Y3 );
+		g2.fillPolygon(ear2);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
 		g2.drawString("Meow", catX, catY+HEAD_DIMENSION+10);	
