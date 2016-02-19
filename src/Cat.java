@@ -65,7 +65,7 @@ public class Cat {
 		g2.fillPolygon(ear);
 		g2.setColor(Color.black);
 		Polygon ear2 = new Polygon();
-		ear2.addPoint(catX + EAR_X1+ 90, catY + EAR_Y1);
+		ear2.addPoint(catX + EAR_X1 + 90, catY + EAR_Y1);
 		ear2.addPoint(catX + EAR_X2 + 50, catY + EAR_Y2 );
 		ear2.addPoint(catX + EAR_X3 + 80, catY + EAR_Y3 );
 		g2.fillPolygon(ear2);
