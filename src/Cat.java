@@ -26,6 +26,19 @@ public class Cat {
 	private static final int EAR_Y1 = 8;
 	private static final int EAR_Y2 = 8;
 	private static final int EAR_Y3 = 24;
+	// whisker coordinates
+	private static final int WHISKER1X1 = -15;
+	private static final int WHISKER1X2 = 35;
+	private static final int WHISKER1Y1 = 0;
+	private static final int WHISKER1Y2 = 0;
+	private static final int WHISKER2X1 = -15;
+	private static final int WHISKER2X2 = 35;
+	private static final int WHISKER2Y1 = 10;
+	private static final int WHISKER2Y2 = -10;
+	private static final int WHISKER3X1 = -15;
+	private static final int WHISKER3X2 = 35;
+	private static final int WHISKER3Y1 = -10;
+	private static final int WHISKER3Y2 = 10;
 	
 	
 	// draw will render the Cat on the Graphics object
@@ -50,6 +63,10 @@ public class Cat {
 		y = catY + MOUTH_Y;
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
 		g2.setColor(Color.black);
+		// Draw whiskers
+		g2.drawLine(WHISKER1X1 + x,WHISKER1Y1 + y,WHISKER1X2 + x,WHISKER1Y2 + y);
+		g2.drawLine(WHISKER2X1 + x,WHISKER2Y1 + y,WHISKER2X2 + x,WHISKER2Y2 + y);
+		g2.drawLine(WHISKER3X1 + x,WHISKER3Y1 + y,WHISKER3X2 + x,WHISKER3Y2 + y);
 		// Draw Ears
 		g2.setColor(Color.black);
 		Polygon ear = new Polygon();
@@ -66,7 +83,7 @@ public class Cat {
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
 		g2.drawString("Meow!", 0, 12);	
-
+		// Displays cats name
 		g2.drawString("My name is Sir Snuggles McMeow.", catX, catY+HEAD_DIMENSION+25);	
 	}
 }
